@@ -1,3 +1,4 @@
+'use client';
 import { auth } from '@/firebase/config';
 import { signOut } from 'firebase/auth';
 import React from 'react';
@@ -21,9 +22,14 @@ const Navbar: React.FC<NavbarProps> = () => {
         <h3 className={classes.navTitle}>06 Store</h3>
       </div>
       {user ? (
-        <button className={classes.navButton} onClick={signOutHandler}>
-          Sign out
-        </button>
+        <div className={classes.navSignPanel}>
+          <button className={classes.navButton} onClick={signOutHandler}>
+            Sign out
+          </button>
+          <Link href="/createItem" className={classes.navButton}>
+            Create new items
+          </Link>
+        </div>
       ) : (
         <div className={classes.navSignPanel}>
           <Link href="/signIn" className={classes.navButton}>

@@ -1,9 +1,7 @@
-import { auth } from '@/firebase/config';
-import Preloader from './Preloader';
 import ReduxProvider from './ReduxProvider';
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { UserState } from '@/types/UserState';
+import Navbar from '@/components/navbar/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,7 +13,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          <Navbar />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );
