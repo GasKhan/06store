@@ -15,7 +15,10 @@ const useAuthState = () => {
         dispatch(setUser(newUser));
 
         console.log('User logged in');
-      } else console.log('User logged out');
+      } else {
+        dispatch(setUser(null));
+        console.log('User logged out');
+      }
     });
 
     return () => unsubscribe();

@@ -24,9 +24,9 @@ const useSignInOrSignUp = () => {
       else if (signType === 'signIn') {
         signIn(email, password).then(async ({ result, error }) => {
           setError(error);
-          await axios.post('/api/setCustomClaims', {
-            idToken: result?.user.getIdToken(),
-          });
+          // await axios.post('/api/setCustomClaims', {
+          //   idToken: result?.user.getIdToken(),
+          // });
         });
       }
     } catch (e: any) {

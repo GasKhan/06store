@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #000;
+  opacity: 0.8;
+  position: sticky;
+}
+
+.navSignPanel {
+  display: flex;
+  flex-grow: 0.1;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc;
+  height: 40px;
+  width: 100px;
+  border: 1px solid #ffc;
+  border-radius: 7%;
+  color: #000;
+  font-weight: bold;
+}
+
+.navTitleBlock {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navTitle {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+}
