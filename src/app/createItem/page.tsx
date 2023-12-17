@@ -1,7 +1,6 @@
 'use client';
 
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import CreateCategory from '../../components/createCategory/CreateCategory';
 import { collection, doc, getDoc, getDocs, setDoc } from 'firebase/firestore';
 import { db } from '@/firebase/config';
 
@@ -104,8 +103,6 @@ const CreateItemPage = () => {
           </form>
         </div>
       </div>
-
-      <CreateCategory />
     </div>
   );
 };
